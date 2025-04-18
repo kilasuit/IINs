@@ -1,0 +1,57 @@
+name: 📖 IIN Feedback
+description: Feedback about one or more IINs
+title: "📖 Feedback on IIN: <fuid> (📖 Feedback on Multiple IINs)"
+labels: ["Config-or-Docs-OutDated"]
+projects: ["kilasuit-other-repos"]
+assignees:
+  - kilasuit
+body:
+- type: checkboxes
+  attributes:
+    label: Is there an existing issue for this?
+    description: Please search to see if an issue already exists for the bug you encountered.
+    options:
+    - label: I have searched the existing issues
+      required: true
+- type: textarea
+  id: IIN-id-fuid
+  attributes:
+    label: Summary
+    description: Please Provide the ID or FUID of the IIN Doc you are providing feedback on. Note you can provide the ID, the FUID, both or multiple of either.
+    placeholder: |
+      id: 'IIN-P01-2025-04-17-Scott_and_Mark_Series'
+      fuid: kilasuit\IINs\TechStuff\Scott_and_Mark\IIN-P01-2025-04-17-Series
+  validations:
+    required: true
+    # if: adr-docs, "Existing", "Both" // if the user selects "Existing" or "Both", this field is required buut this syntax is not supported in the current version of GitHub issues template from what I could tell.
+    # Also annoyingly I wanted to use checkboxes for this but it doesn't seem to work as I would expect - this is a todo for the future under issue #18
+- type: textarea
+  attributes:
+    label: Suggested Updates
+    description: What needs updating in these files.
+    placeholder: |
+      [] - IIN has spelling mistakes
+      [] - IIN is missing key links 
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Anything else?
+    description: |
+      Any other comments, like did you like this IIN?
+      Have you used this IIN to help you with your work?
+      Have you created your own IIN to comment about the one/s you are providing feedback on?
+      If no other comments, please put N/A or None
+  validations:
+    required: true
+- type: dropdown
+  attributes:
+    label: Intend to contribute fixes from your feedback on this IIN?
+    description: Intend to contribute this work?
+    options:
+    - "Yes, I intend to contribute this work & do not require any assistance"
+    - "Yes, I intend to contribute this work & but would like some assistance"
+    - "No, I do not intend to contribute this work"
+    - "No Updates required, just providing feedback"
+  validations:
+    required: true
