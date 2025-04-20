@@ -1,4 +1,4 @@
-name: New IIN Submission
+name: New IIN
 description: This issue is for tracking when someone has either added or intends to add an IIN to this repo
 title: "📖 New IIN: "
 # labels: ["Config-or-Docs-OutDated"] Update this in later PR when we have a label for this issue type
